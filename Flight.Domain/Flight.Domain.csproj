@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>Tui.Flight.Domain</AssemblyName>
+    <RootNamespace>Tui.Flight.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Frameworks.BusinessLogic\BusinessLogic.csproj" />
+  </ItemGroup>
+
+</Project>

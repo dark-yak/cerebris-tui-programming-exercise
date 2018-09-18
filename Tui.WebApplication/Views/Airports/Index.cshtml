@@ -1,0 +1,25 @@
+﻿@model IEnumerable<AirportViewModel>
+@{
+    ViewData["Title"] = "Airports";
+}
+
+<h2>Airport list</h2>
+
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>IATA code</th>
+        <th>Name</th>
+        <th>Longitue</th>
+        <th>Latitude</th>
+    </tr>
+    @foreach (var airport in Model)
+    {
+        <tr>
+            <td>@airport.Id</td>
+            <td>@airport.Name</td>
+            <td>@airport.Longitude</td>
+            <td>@airport.Latitude</td>
+        </tr>
+    }
+</table>
+

@@ -1,0 +1,40 @@
+﻿@model Tui.WebApplication.Models.FlightEditViewModel
+
+@{
+    ViewData["Title"] = "New";
+}
+
+<h2>Create a new flight</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="New">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DepartureAirportId" class="control-label"></label>
+                <select asp-for="DepartureAirportId" asp-items="Model.Airports" class="form-control">
+                    <option value="">Please select a departure airport</option>
+                </select>
+                <span asp-validation-for="DepartureAirportId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DestinationAirportId" class="control-label"></label>
+                <select asp-for="DestinationAirportId" asp-items="Model.Airports" class="form-control">
+                    <option value="">Please select a destination airport</option>
+                </select>
+                <span asp-validation-for="DestinationAirportId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AircraftId" class="control-label"></label>
+                <select asp-for="AircraftId" asp-items="Model.Aircrafts" class="form-control">
+                    <option value="">Please select an aircraft</option>
+                </select>
+                <span asp-validation-for="AircraftId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-success" />
+                <a asp-action="Index" class="btn btn-danger">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

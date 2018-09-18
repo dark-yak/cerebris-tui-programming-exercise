@@ -1,0 +1,42 @@
+﻿@using Tui.WebApplication.FlightClient.Dto
+@model IEnumerable<FlightReportDto>
+@{
+    ViewData["Title"] = "Flight report";
+}
+
+<h2>Flight report</h2>
+<div class="container">
+    <table class="table table-bordered table-responsive table-hover">
+        <tr>
+            <th>Flight GUID</th>
+            <th>Aircraft</th>
+            <th>Departure airport</th>
+            <th>Destination airport</th>
+            <th>Distance (miles)</th>
+            <th>Fuel consumption</th>
+        </tr>
+        @foreach (var flight in Model)
+        {
+        <tr>
+            <td>@flight.Id</td>
+            <td>
+                <span class="badge alert-success">@flight.Aircraft.Id</span> @flight.Aircraft.Name<br />
+                <h6>Fuel per mile : @flight.Aircraft.FuelConsumptionPerMile.ToString("0.000")</h6>
+                <h6>Fuel at takeoff : @flight.Aircraft.FuelTakeOffEffort.ToString("0.000")</h6>
+            </td>
+            <td>
+                <span class="badge alert-success">@flight.DepartureAirport.Id</span> @flight.DepartureAirport.Name<br />
+                <h6>Latitude : @flight.DepartureAirport.Latitude</h6>
+                <h6>Longitude : @flight.DepartureAirport.Longitude</h6>
+            </td>
+            <td>
+                <span class="badge alert-success">@flight.DestinationAirport.Id</span> @flight.DestinationAirport.Name
+                <h6>Latitude : @flight.DestinationAirport.Latitude</h6>
+                <h6>Longitude : @flight.DestinationAirport.Longitude</h6>
+            </td>
+            <td>@flight.Distance.ToString("0.000")</td>
+            <td>@flight.FuelConsumption.ToString("0.000")</td>
+        </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<FlightViewModel>
+@{
+    ViewData["Title"] = "Flights";
+}
+
+<h2>Flight list <a asp-action="New" class="btn btn-success">New</a></h2>
+
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>Flight GUID</th>
+        <th>Aircraft</th>
+        <th>Departure airport</th>
+        <th>Destination airport</th>
+        <th></th>
+    </tr>
+    @foreach (var flight in Model)
+    {
+    <tr>
+        <td>@flight.Id</td>
+        <td>@flight.AircraftName</td>
+        <td>@flight.DepartureAirportName</td>
+        <td>@flight.DestinationAirportName</td>
+        <td><a class="btn btn-success" asp-action="Edit" asp-route-id="@flight.Id">Edit</a></td>
+    </tr>
+    }
+</table>
+

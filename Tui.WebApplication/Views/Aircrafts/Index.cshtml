@@ -1,0 +1,25 @@
+﻿@model IEnumerable<AircraftViewModel>
+@{
+    ViewData["Title"] = "Aircrafts";
+}
+
+<h2>Aircraft list</h2>
+
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>Identifier</th>
+        <th>Name</th>
+        <th>FuelConsumptionPerMile</th>
+        <th>FuelTakeOffEffort</th>
+    </tr>
+    @foreach (var aircraft in Model)
+    {
+        <tr>
+            <td>@aircraft.Id</td>
+            <td>@aircraft.Name</td>
+            <td>@aircraft.FuelConsumptionPerMile</td>
+            <td>@aircraft.FuelTakeOffEffort</td>
+        </tr>
+    }
+</table>
+

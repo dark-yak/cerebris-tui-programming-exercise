@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPersistenceFlight xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PersistenceFlight>
+    <Id>d670c2d0-5ab9-4e25-9736-57d4f0a43d3c</Id>
+    <DepartureAirportId>MAD</DepartureAirportId>
+    <DestinationAirportId>LAX</DestinationAirportId>
+    <AircraftId>OO-JAA</AircraftId>
+  </PersistenceFlight>
+  <PersistenceFlight>
+    <Id>061c56a5-80de-4e04-b3c6-56a3c8d6b363</Id>
+    <DepartureAirportId>CDG</DepartureAirportId>
+    <DestinationAirportId>ORY</DestinationAirportId>
+    <AircraftId>OO-JAX</AircraftId>
+  </PersistenceFlight>
+  <PersistenceFlight>
+    <Id>d9402457-1d7a-4e0b-bd9e-2945aeb98e0e</Id>
+    <DepartureAirportId>FRA</DepartureAirportId>
+    <DestinationAirportId>CDG</DestinationAirportId>
+    <AircraftId>OO-TUP</AircraftId>
+  </PersistenceFlight>
+  <PersistenceFlight>
+    <Id>ba347105-15bf-42c2-9362-55c445371849</Id>
+    <DepartureAirportId>ORY</DepartureAirportId>
+    <DestinationAirportId>CDG</DestinationAirportId>
+    <AircraftId>OO-JEF</AircraftId>
+  </PersistenceFlight>
+  <PersistenceFlight>
+    <Id>cace9390-d43b-4177-8901-2c6b74c4c51a</Id>
+    <DepartureAirportId>MAD</DepartureAirportId>
+    <DestinationAirportId>THF</DestinationAirportId>
+    <AircraftId>OO-TUP</AircraftId>
+  </PersistenceFlight>
+</ArrayOfPersistenceFlight>
